@@ -1,0 +1,59 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background: lightcoral;
+  background-size: cover;
+  height: 300px;
+}
+
+.jumbotron h1{
+  color: rgb(20, 8, 11);
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.btn-xlarge
+{
+  margin-top: 20px;
+  background-color: rgb(41, 1, 68);
+  border-color: #212e42;
+}
+
+.btn-xlarge:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.denied {
+    color: red;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+th {
+  text-align: center;
+}
+
+h1
+{
+  color: green;
+}
+
+h3
+{
+  color: red;
+}
+
+
+
+

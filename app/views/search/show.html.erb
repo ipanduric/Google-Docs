@@ -1,0 +1,34 @@
+<div class="center">
+  <h3>
+    List of all files on your Google Drive account containing  <%= params[:search] %>
+  </h3>
+  <br>
+<table border="1px solid black">
+  <thead>
+    <tr>
+      <th>
+        Title
+      </th>
+      <th>
+        Owner
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <% @searched_files.items.each do |i|  %>
+          <br>
+          <%= i.title %>
+        <% end %>
+      </td>
+      <td>
+        <% @searched_files.items.each do |i|  %>
+          <br>
+          <%= i.owner_names.slice!(0) %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

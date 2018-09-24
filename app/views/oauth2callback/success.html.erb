@@ -1,0 +1,64 @@
+<div class="center">
+  <h1>
+    You have successfully registered!
+  </h1>
+  <h3>
+    Here you can search your files!
+  </h3>
+    <p>
+      <%= form_tag(search_show_path, method: :get) do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+      <% end %>
+    </p>
+  <h3>
+    List of all files on your Google Drive account:
+  </h3>
+  <br>
+  <table border="1px solid black">
+    <thead>
+      <tr >
+        <th>
+          Picture
+        </th>
+        <th>
+          Title
+        </th>
+        <th>
+          Last modified date
+        </th>
+        <th>
+          Owner
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <% @files.items.each do |i|  %>
+            <br>
+            <%= image_tag i.icon_link %>
+          <% end %>
+        </td>
+        <td>
+          <% @files.items.each do |i|  %>
+            <br>
+            <%= i.title %>
+          <% end %>
+        </td>
+        <td>
+          <% @files.items.each do |i|  %>
+            <br>
+            <%= i.modified_date %>
+          <% end %>
+        </td>
+        <td>
+          <% @files.items.each do |i|  %>
+            <br>
+            <%= i.owner_names.slice!(0) %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
